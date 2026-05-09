@@ -3,24 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doces da Dona Maria</title>
+    <title>Dona Maria Doces - Os Melhores Doces Artesanais</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Doces da Dona Maria</h1>
-        <nav>
-            <a href="index.html">Catálogo</a>
-            <a href="admin.html">Área do Editor</a>
-        </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🍰</span>
+                    <span class="logo-text">Dona Maria <span>Doces</span></span>
+                </a>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#inicio" class="nav-link active">Início</a></li>
+                        <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                        <li><a href="admin.html" class="nav-link nav-admin">Área Admin</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <span class="theme-icon-light">☀️</span>
+                        <span class="theme-icon-dark">🌙</span>
+                    </button>
+                    
+                    <button class="cart-btn" id="cartBtn" aria-label="Carrinho">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h2>Nosso Catálogo</h2>
-        <div id="grid-produtos" class="grid-produtos"></div>
-    </main>
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Doces Artesanais<br>Feitos com <span>Amor</span></h1>
+                <p class="hero-subtitle">Descubra o sabor único dos doces tradicionais da Dona Maria. Cada receita é preparada com ingredientes selecionados e muito carinho.</p>
+                <div class="hero-buttons">
+                    <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
+                    <a href="#contato" class="btn btn-outline">Fazer Pedido</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-badge">
+                    <span class="badge-number">+500</span>
+                    <span class="badge-text">Clientes Felizes</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="js/models/DoceModel.js"></script>
-    <script src="js/controllers/CatalogoController.js"></script>
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="categories-grid" id="categoriesGrid">
+                <!-- Categories will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog" id="catalogo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nosso Catálogo</h2>
+                <p class="section-subtitle">Escolha seus doces favoritos e faça seu pedido pelo WhatsApp</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar doces..." class="search-input">
+                    <span class="search-icon">🔍</span>
+                </div>
+                
+                <div class="filter-group">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="todos">Todas as Categorias</option>
+                    </select>
+                    
+                    <select id="sortFilter" class="filter-select">
+                        <option value="nome">Ordenar por Nome</option>
+                        <option value="preco-menor">Menor Preço</option>
+                        <option value="preco-maior">Maior Preço</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <span class="empty-icon">🔍</span>
+                <h3>Nenhum doce encontrado</h3>
+                <p>Tente buscar por outro termo ou categoria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre a Dona Maria</h2>
+                    <p>Há mais de 20 anos, a Dona Maria transforma momentos especiais em memórias doces. Tudo começou em uma pequena cozinha, com receitas de família passadas de geração em geração.</p>
+                    <p>Hoje, nossos doces são conhecidos pela qualidade dos ingredientes, pelo carinho no preparo e pelo sabor inconfundível que só a tradição pode oferecer.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="feature-icon">🌿</span>
+                            <span class="feature-text">Ingredientes Naturais</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">👩‍🍳</span>
+                            <span class="feature-text">Feito à Mão</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">❤️</span>
+                            <span class="feature-text">Com Muito Amor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p>Faça seu pedido pelo WhatsApp ou nos visite!</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>Endereço</strong>
+                                <p>Rua das Flores, 123 - Centro</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <p>(11) 99999-9999</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">⏰</span>
+                            <div>
+                                <strong>Horário</strong>
+                                <p>Seg a Sáb: 8h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de fazer um pedido." class="btn btn-whatsapp" target="_blank">
+                        <span>💬</span> Pedir pelo WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="cart-close" id="cartClose">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded dynamically -->
+        </div>
+        <div class="cart-empty" id="cartEmpty">
+            <span>🛒</span>
+            <p>Seu carrinho está vazio</p>
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+            <button class="btn btn-whatsapp btn-checkout" id="checkoutBtn">
+                <span>💬</span> Finalizar pelo WhatsApp
+            </button>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🍰</span>
+                    <span class="logo-text">Dona Maria <span>Doces</span></span>
+                    <p>Doces artesanais feitos com amor desde 2004.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#catalogo">Catálogo</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📸</a>
+                        <a href="#" aria-label="Facebook">👍</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dona Maria Doces. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data/produtos.json" type="application/json" id="produtosData"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

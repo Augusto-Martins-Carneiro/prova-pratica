@@ -3,33 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel - Dona Maria</title>
+    <title>Área Administrativa - Dona Maria Doces</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>Painel do Editor</h1>
-        <nav>
-            <a href="index.html">Ver Catálogo</a>
-        </nav>
+<body class="admin-body">
+    <!-- Header -->
+    <header class="header admin-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🍰</span>
+                    <span class="logo-text">Dona Maria <span>Doces</span></span>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">← Voltar ao Site</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <span class="theme-icon-light">☀️</span>
+                        <span class="theme-icon-dark">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h2>Cadastrar Novo Doce</h2>
-        <form id="form-doce">
-            <input type="text" id="nome" placeholder="Nome do doce" required>
-            <input type="text" id="categoria" placeholder="Categoria (ex: Bolos)" required>
-            <input type="number" id="preco" placeholder="Preço" step="0.01" required>
-            <input type="text" id="imagem" placeholder="Caminho da imagem (ex: img/bolo.jpg)" required>
-            <textarea id="descricao" placeholder="Descrição do produto" required></textarea>
-            <button type="submit">Salvar Doce</button>
-        </form>
+    <!-- Admin Dashboard -->
+    <main class="admin-main">
+        <div class="container">
+            <div class="admin-header-section">
+                <h1 class="admin-title">Painel Administrativo</h1>
+                <p class="admin-subtitle">Gerencie os doces do catálogo</p>
+            </div>
 
-        <h2>Doces Cadastrados</h2>
-        <ul id="lista-doces-admin"></ul>
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon">🍰</span>
+                    <div class="stat-info">
+                        <span class="stat-number" id="totalProducts">0</span>
+                        <span class="stat-label">Total de Doces</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📁</span>
+                    <div class="stat-info">
+                        <span class="stat-number" id="totalCategories">0</span>
+                        <span class="stat-label">Categorias</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">💰</span>
+                    <div class="stat-info">
+                        <span class="stat-number" id="avgPrice">R$ 0</span>
+                        <span class="stat-label">Preço Médio</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Content -->
+            <div class="admin-content">
+                <!-- Form Section -->
+                <section class="admin-form-section">
+                    <div class="form-header">
+                        <h2 id="formTitle">Adicionar Novo Doce</h2>
+                        <button class="btn btn-outline btn-sm" id="resetFormBtn" style="display: none;">
+                            Cancelar Edição
+                        </button>
+                    </div>
+                    
+                    <form id="productForm" class="product-form">
+                        <input type="hidden" id="productId">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="productName">Nome do Doce *</label>
+                                <input type="text" id="productName" class="form-input" placeholder="Ex: Brigadeiro Gourmet" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="productCategory">Categoria *</label>
+                                <select id="productCategory" class="form-input" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="Brigadeiros">Brigadeiros</option>
+                                    <option value="Bolos">Bolos</option>
+                                    <option value="Tortas">Tortas</option>
+                                    <option value="Trufas">Trufas</option>
+                                    <option value="Doces Finos">Doces Finos</option>
+                                    <option value="Outros">Outros</option>
+                                </select>
+                                <span class="error-message" id="categoryError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productDescription">Descrição *</label>
+                            <textarea id="productDescription" class="form-input form-textarea" placeholder="Descreva o doce..." required></textarea>
+                            <span class="error-message" id="descriptionError"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="productPrice">Preço (R$) *</label>
+                                <input type="number" id="productPrice" class="form-input" placeholder="0.00" step="0.01" min="0" required>
+                                <span class="error-message" id="priceError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="productImage">URL da Imagem</label>
+                                <input type="url" id="productImage" class="form-input" placeholder="https://exemplo.com/imagem.jpg">
+                                <span class="helper-text">Deixe vazio para usar imagem padrão</span>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span class="btn-icon">➕</span> Adicionar Doce
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Products List Section -->
+                <section class="admin-list-section">
+                    <div class="list-header">
+                        <h2>Doces Cadastrados</h2>
+                        <div class="list-actions">
+                            <input type="text" id="adminSearch" class="search-input-sm" placeholder="Buscar...">
+                            <button class="btn btn-outline btn-sm" id="exportBtn">
+                                📥 Exportar JSON
+                            </button>
+                            <button class="btn btn-outline btn-sm" id="importBtn">
+                                📤 Importar JSON
+                            </button>
+                            <input type="file" id="importFile" accept=".json" style="display: none;">
+                        </div>
+                    </div>
+
+                    <div class="products-table-container">
+                        <table class="products-table">
+                            <thead>
+                                <tr>
+                                    <th>Imagem</th>
+                                    <th>Nome</th>
+                                    <th>Categoria</th>
+                                    <th>Preço</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productsTableBody">
+                                <!-- Products will be loaded dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="empty-state" id="adminEmptyState" style="display: none;">
+                        <span class="empty-icon">📦</span>
+                        <h3>Nenhum doce cadastrado</h3>
+                        <p>Adicione seu primeiro doce usando o formulário acima</p>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
-    <script src="js/models/DoceModel.js"></script>
-    <script src="js/controllers/AdminController.js"></script>
+    <!-- Delete Confirmation Modal -->
+    <div class="modal-overlay" id="deleteModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Confirmar Exclusão</h3>
+                <button class="modal-close" id="modalClose">✕</button>
+            </div>
+            <div class="modal-body">
+                <p>Tem certeza que deseja excluir o doce "<span id="deleteProductName"></span>"?</p>
+                <p class="warning-text">Esta ação não pode ser desfeita.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" id="cancelDelete">Cancelar</button>
+                <button class="btn btn-danger" id="confirmDelete">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon" id="toastIcon">✓</span>
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>
