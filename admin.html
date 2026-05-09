@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Dona Maria</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Painel do Editor</h1>
+        <nav>
+            <a href="index.html">Ver Catálogo</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cadastrar Novo Doce</h2>
+        <form id="form-doce">
+            <input type="text" id="nome" placeholder="Nome do doce" required>
+            <input type="text" id="categoria" placeholder="Categoria (ex: Bolos)" required>
+            <input type="number" id="preco" placeholder="Preço" step="0.01" required>
+            <input type="text" id="imagem" placeholder="Caminho da imagem (ex: img/bolo.jpg)" required>
+            <textarea id="descricao" placeholder="Descrição do produto" required></textarea>
+            <button type="submit">Salvar Doce</button>
+        </form>
+
+        <h2>Doces Cadastrados</h2>
+        <ul id="lista-doces-admin"></ul>
+    </main>
+
+    <script src="js/models/DoceModel.js"></script>
+    <script src="js/controllers/AdminController.js"></script>
+</body>
+</html>
