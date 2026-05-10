@@ -1,0 +1,22 @@
+{
+  "name": "dona-maria-doces",
+  "version": "1.0.0",
+  "description": "Sistema de vendas de doces da Dona Maria - HTML, CSS e JavaScript puro",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve -l 3000",
+    "start": "npx serve -l 3000",
+    "build": "echo 'No build required - Static HTML/CSS/JS'"
+  },
+  "keywords": [
+    "doces",
+    "vendas",
+    "frontend",
+    "vanilla-js"
+  ],
+  "author": "Dona Maria Doces",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
