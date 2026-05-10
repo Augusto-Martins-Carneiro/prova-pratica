@@ -95,7 +95,7 @@ const ProductModel = {
             }
 
             // Carrega do arquivo JSON
-            const response = await fetch('data/produtos.json');
+            const response = await fetch('products.json');
             const data = await response.json();
             
             // Salva no LocalStorage
