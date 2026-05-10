@@ -1,59 +1,60 @@
 # Sistema de Doces da Dona Maria
 
-Este é um sistema frontend para a venda de doces pela internet, desenvolvido com HTML, CSS e JavaScript.
+Ei, pessoal! Sou um aluno do curso técnico e criei esse sistema maneiro pra vender doces online da Dona Maria. É um site simples feito com HTML, CSS e JavaScript, tipo um e-commerce básico pra doces. 😋
 
-## Estrutura do Projeto
+## Como tá organizado o projeto
 
-- `index.html`: Página pública do catálogo de doces.
-- `admin.html`: Página administrativa para gerenciamento de doces (CRUD).
-- `css/style.css`: Estilos CSS com responsividade.
-- `js/models/DoceModel.js`: Modelo para manipulação dos dados dos doces, utilizando LocalStorage e JSON.
-- `js/controllers/CatalogoController.js`: Controlador para a visualização do catálogo.
-- `js/controllers/AdminController.js`: Controlador para o CRUD administrativo.
+- `index.html`: A página principal onde os clientes veem o catálogo dos doces.
+- `admin.html`: A área do admin pra gerenciar os doces, tipo adicionar, editar ou deletar.
+- `css/style.css`: Os estilos CSS, com tudo responsivo pra funcionar no celular também.
+- `js/models/DoceModel.js`: Aqui cuido dos dados dos doces, usando LocalStorage e JSON pra salvar tudo.
+- `js/controllers/CatalogoController.js`: Controla como o catálogo aparece pros clientes.
+- `js/controllers/AdminController.js`: Controla as ações do admin, tipo CRUD (criar, ler, atualizar, deletar).
 
-## Organização das Pastas
+## Pastas do projeto
 
-- `css/`: Contém os arquivos de estilo.
-- `js/`: Contém os arquivos JavaScript organizados em:
-  - `models/`: Modelos de dados.
-  - `controllers/`: Controladores para lógica de negócio.
+- `css/`: Tudo de estilo fica aqui.
+- `js/`: Os arquivos JavaScript, separados em:
+  - `models/`: Pra lidar com os dados.
+  - `controllers/`: Pra lógica e interação com a página.
 
-## Decisões Tomadas
+## Decisões que tomei
 
-- Utilização de padrão MVC simplificado: Model (DoceModel), View (HTML), Controller (CatalogoController e AdminController).
-- Persistência de dados simulada com LocalStorage e JSON.
-- Responsividade implementada com CSS Grid e Media Queries.
-- Separação de responsabilidades: Model cuida dos dados, Controllers cuidam da lógica e interação com DOM.
+- Usei um MVC simplificado: Model pra dados, View pro HTML, Controller pra lógica. É bem básico, mas funciona.
+- Pra salvar os dados, usei LocalStorage e JSON, já que não tem banco de dados de verdade.
+- Deixei responsivo com CSS Grid e Media Queries, pra ficar bom no PC e no celular.
+- Separei as responsabilidades: Model cuida dos dados, Controllers cuidam da interação.
 
-## Funcionamento da Aplicação
+## Como funciona o app
 
 ### Catálogo (index.html)
-- Exibe os doces cadastrados em um grid responsivo.
-- Cada card mostra nome, categoria, descrição, preço e imagem.
-- Botão "Pedir pelo WhatsApp" para contato direto.
+- Mostra os doces em um grid legal, cada um com nome, categoria, descrição, preço e foto.
+- Tem um botão "Pedir pelo WhatsApp" pra mandar mensagem direto.
 
-### Área Administrativa (admin.html)
-- Formulário para cadastrar novos doces.
-- Listagem dos doces com opções de editar e deletar.
-- Dados salvos no LocalStorage.
+### Área Admin (admin.html)
+- Formulário pra cadastrar novos doces.
+- Lista todos os doces com opções pra editar ou deletar.
+- Tudo fica salvo no LocalStorage do navegador.
 
-## Padrão Utilizado
+## Padrão que usei
 
 MVC Simplificado:
 - **Model**: Gerencia os dados (DoceModel.js).
-- **View**: HTML das páginas.
-- **Controller**: Lógica de interação (CatalogoController.js e AdminController.js).
+- **View**: As páginas HTML.
+- **Controller**: A lógica de interação (CatalogoController.js e AdminController.js).
 
-## Como Executar
+## Como rodar
 
-1. Abra o `index.html` em um navegador para visualizar o catálogo.
-2. Abra o `admin.html` para gerenciar os doces.
-3. Os dados são persistidos localmente no navegador via LocalStorage.
+1. Abre o `index.html` no navegador pra ver o catálogo.
+2. Abre o `admin.html` pra gerenciar os doces.
+3. Os dados ficam salvos localmente no navegador, tipo no cache.
 
-## Tecnologias Utilizadas
+## Tecnologias que usei
 
 - HTML5
-- CSS3 (com Media Queries para responsividade)
+- CSS3 (com Media Queries pra responsividade)
 - JavaScript (ES6+)
-- LocalStorage para persistência
-- JSON para manipulação de dados
+- LocalStorage pra persistência
+- JSON pra manipular os dados
+
+Foi um projeto legal pra aprender sobre frontend e organização de código! Se tiver dúvidas, pergunta aí. 🚀

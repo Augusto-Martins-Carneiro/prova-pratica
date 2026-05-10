@@ -6,7 +6,7 @@
       "descricao": "Delicioso brigadeiro tradicional coberto com chocolate belga e granulado especial. Uma explosão de sabor que derrete na boca.",
       "preco": 4.50,
       "categoria": "Brigadeiros",
-      "imagem": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400"
+      "imagem": "images/brigadeirogourmet.jpg"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "descricao": "Brigadeiro premium com pasta de pistache importada e cobertura crocante. Um sabor único e sofisticado.",
       "preco": 6.00,
       "categoria": "Brigadeiros",
-      "imagem": "https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400"
+      "imagem": "images/brigadeiropistache.jpg"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "descricao": "Bolo fofinho com camadas generosas de brigadeiro cremoso e cobertura de chocolate meio amargo.",
       "preco": 85.00,
       "categoria": "Bolos",
-      "imagem": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400"
+      "imagem": "images/bolochocolate.jpg"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "descricao": "Clássico bolo vermelho aveludado com cobertura de cream cheese. Perfeito para ocasiões especiais.",
       "preco": 95.00,
       "categoria": "Bolos",
-      "imagem": "https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=400"
+      "imagem": "images/boloredvelvet.jpg"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "descricao": "Torta refrescante com massa crocante, creme de limão azedinho e merengue suíço gratinado.",
       "preco": 65.00,
       "categoria": "Tortas",
-      "imagem": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=400"
+      "imagem": "images/tortalimao.jpg"
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "descricao": "Torta cremosa com base de biscoito, creme de baunilha e morangos frescos selecionados.",
       "preco": 75.00,
       "categoria": "Tortas",
-      "imagem": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400"
+      "imagem": "images/tortamorango.jpg"
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "descricao": "Trufa artesanal com recheio cremoso de maracujá e cobertura de chocolate branco.",
       "preco": 5.50,
       "categoria": "Trufas",
-      "imagem": "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=400"
+      "imagem": "images/trufamaracuja.jpg"
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "descricao": "Trufa clássica de chocolate ao leite com recheio cremoso e cobertura de cacau em pó.",
       "preco": 5.00,
       "categoria": "Trufas",
-      "imagem": "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=400"
+      "imagem": "images/trufachocolate.jpg"
     },
     {
       "id": 9,
@@ -70,7 +70,7 @@
       "descricao": "Tradicional doce de casamento com massa amanteigada e recheio de doce de leite argentino.",
       "preco": 4.00,
       "categoria": "Doces Finos",
-      "imagem": "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=400"
+      "imagem": "images/bemcasado.jpg"
     },
     {
       "id": 10,
@@ -78,7 +78,7 @@
       "descricao": "Docinho tradicional de amendoim torrado com açúcar e leite condensado. Sabor de infância.",
       "preco": 3.50,
       "categoria": "Doces Finos",
-      "imagem": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400"
+      "imagem": "images/cajuzinho.jpg"
     },
     {
       "id": 11,
@@ -86,7 +86,7 @@
       "descricao": "Bolo caseiro fofinho de cenoura com cobertura generosa de chocolate. Receita da vovó.",
       "preco": 55.00,
       "categoria": "Bolos",
-      "imagem": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=400"
+      "imagem": "images/bolocenoura.jpg"
     },
     {
       "id": 12,
@@ -94,7 +94,7 @@
       "descricao": "Brigadeiro cremoso de leite ninho com cobertura de leite em pó. Doce e irresistível.",
       "preco": 4.50,
       "categoria": "Brigadeiros",
-      "imagem": "https://images.unsplash.com/photo-1587668178277-295251f900ce?w=400"
+      "imagem": "images/brigadeironinh.jpg"
     }
   ],
   "categorias": [
