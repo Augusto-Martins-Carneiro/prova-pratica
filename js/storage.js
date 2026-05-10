@@ -88,13 +88,7 @@ const ProductModel = {
      */
     loadInitialProducts: async function() {
         try {
-            // Verifica se já existem produtos no LocalStorage
-            const existingProducts = StorageService.get(STORAGE_KEYS.PRODUCTS);
-            if (existingProducts && existingProducts.length > 0) {
-                return existingProducts;
-            }
-
-            // Carrega do arquivo JSON
+            // Sempre carrega do arquivo JSON para garantir dados atualizados
             const response = await fetch('products.json');
             const data = await response.json();
             
