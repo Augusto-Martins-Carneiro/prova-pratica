@@ -58,3 +58,29 @@ cart.js: específico pro carrinho, mas é integrado no storage.js, ele cuida de 
 
 admin.js: controla a página do admin, onde dona Maria gerencia seus produtos
 
+products.json: lista os produtos, e serve como fonte de dados inicialmente carregado pelo JS para popular o catálogo
+
+paackage.json: metadados e scripts do node.js, gerencia as dependencias e comandos
+
+
+-- Tecnologias utilizadas:
+
+HTML5
+CSS3
+JS ES6+
+LOCALSTORAGER
+JSON    
+
+Funcionalidades do sistema:
+
+Catálogo: exibe os produtos em formato de cards, nome, categoria, descrição, preço e imagem. Além de um botão de pedir via Whatsapp
+
+Área do admin: cadastro de produtos, edição, e exclusão de produtos, e dados utilizando o localstorage
+
+Organização do projeto:
+
+Foi utilizado um padrão MVC simplificado para deixar os códigos mais organizados
+
+Model: responsável pelos dados da aplicação
+View
+
