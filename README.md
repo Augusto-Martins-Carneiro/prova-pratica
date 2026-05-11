@@ -77,10 +77,51 @@ Catálogo: exibe os produtos em formato de cards, nome, categoria, descrição, 
 
 Área do admin: cadastro de produtos, edição, e exclusão de produtos, e dados utilizando o localstorage
 
-Organização do projeto:
 
-Foi utilizado um padrão MVC simplificado para deixar os códigos mais organizados
+Objetivo do Projeto
 
-Model: responsável pelos dados da aplicação
-View
+Esse projeto foi desenvolvido para praticar:
 
+Estruturação de aplicações frontend
+Organização de arquivos
+Manipulação do DOM
+CRUD com JavaScript
+Responsividade
+Separação de responsabilidades utilizando MVC
+
+Organização do Projeto
+index.html
+
+Página principal do catálogo público.
+admin.html
+
+Página administrativa para cadastrar, editar e remover produtos.
+products.json
+
+Dados iniciais dos doces e categorias.
+package.json
+
+Configuração do projeto e scripts de servidor local.
+README.md
+
+Documentação do projeto.
+css
+
+style.css — Estilos principais da aplicação.
+admin.css — Estilos específicos da área administrativa.
+global.css — Estilos base/variáveis e reset.
+js
+
+storage.js — Gerencia dados e persistência com LocalStorage/JSON.
+app.js — Controla a página pública, filtros, renderização e carrinho.
+cart.js — Lógica do carrinho de compras.
+admin.js — Controla o CRUD e a interface administrativa.
+app..js — Cópia/versão duplicada de app.js.
+images
+
+Fotos dos doces usadas pelo catálogo.
+
+
+Uso da inteligência artificial:
+
+Como proposto de forma consultiva para o projeto sobre IA, para tirar dúvidas e etc. Eu usei bastante a IA para corrigir o alinhamento e, quando eu tirava dúvidas, ela me recomendava exemplos de código para melhorar meu sistema, além que a IA do visual code ajudou muito a exergar os erros, corrigir bugs e deixá-lo funciona. Isso é um dos motivos do porque meu código possuem na maioria das vezes bastante linhas, pois a IA foi me ajudando ao eu esclarecer minhas dúvidas.

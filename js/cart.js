@@ -1,10 +1,3 @@
-/**
- * =====================================================
- * DONA MARIA DOCES - CART MODULE
- * Módulo responsável pelo gerenciamento do carrinho
- * de compras
- * =====================================================
- */
 
 /**
  * CartService - Serviço para gerenciamento do carrinho

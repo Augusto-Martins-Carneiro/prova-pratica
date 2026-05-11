@@ -1,10 +1,3 @@
-/**
- * =====================================================
- * DONA MARIA DOCES - ADMIN APPLICATION
- * Arquivo responsável pela área administrativa
- * com CRUD completo de produtos
- * =====================================================
- */
 
 /**
  * AdminApp - Controlador da área administrativa

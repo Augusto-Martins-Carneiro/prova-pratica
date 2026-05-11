@@ -1,10 +1,3 @@
-/**
- * =====================================================
- * DONA MARIA DOCES - STORAGE MODULE
- * Módulo responsável pelo gerenciamento de dados
- * utilizando LocalStorage e JSON
- * =====================================================
- */
 
 // Chaves do LocalStorage
 const STORAGE_KEYS = {

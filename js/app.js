@@ -1,9 +1,3 @@
-/**
- * =====================================================
- * DONA MARIA DOCES - MAIN APPLICATION
- * Arquivo principal que controla a página pública
- * =====================================================
- */
 
 /**
  * App - Controlador principal da aplicação
