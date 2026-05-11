@@ -1,60 +1,60 @@
-# Sistema de Doces da Dona Maria
+Sistema de Doces da Dona Maria
 
-Ei, pessoal! Sou um aluno do curso técnico e criei esse sistema maneiro pra vender doces online da Dona Maria. É um site simples feito com HTML, CSS e JavaScript, tipo um e-commerce básico pra doces. 😋
+Projeto com o intuito de ajudar dona Maria a vender seus doces caseiros e expandir sua clientela.
 
-## Como tá organizado o projeto
+- Estruturação do Projeto:
 
-- `index.html`: A página principal onde os clientes veem o catálogo dos doces.
-- `admin.html`: A área do admin pra gerenciar os doces, tipo adicionar, editar ou deletar.
-- `css/style.css`: Os estilos CSS, com tudo responsivo pra funcionar no celular também.
-- `js/models/DoceModel.js`: Aqui cuido dos dados dos doces, usando LocalStorage e JSON pra salvar tudo.
-- `js/controllers/CatalogoController.js`: Controla como o catálogo aparece pros clientes.
-- `js/controllers/AdminController.js`: Controla as ações do admin, tipo CRUD (criar, ler, atualizar, deletar).
+📁 PROVA-PRATICA/
+│
+├── 📁 css/
+│   ├── admin.css
+│   ├── global.css
+│   └── style.css
+│
+├── 📁 images/
+│   ├── bemcasado.jpg
+│   ├── bolocenoura.jpg
+│   ├── bolochocolate.jpg
+│   ├── boloredvelvet.jpg
+│   ├── brigadeirogourmet.jpg
+│   ├── brigadeironinh.jpg
+│   ├── brigadeiropistache.jpg
+│   ├── cajuzinho.jpg
+│   ├── tortalimao.jpg
+│   ├── tortamorango.jpg
+│   ├── trufachocolate.jpg
+│   └── trufamaracuja.jpg
+│
+├── 📁 js/
+│   ├── admin.js
+│   ├── app.js
+│   ├── app,js
+│   ├── cart.js
+│   └── storage.js
+│
+├── admin.html
+├── index.html
+├── package.json
+├── products.json
+└── README.md
 
-## Pastas do projeto
+Uma breve descrição dos arquivos:
 
-- `css/`: Tudo de estilo fica aqui.
-- `js/`: Os arquivos JavaScript, separados em:
-  - `models/`: Pra lidar com os dados.
-  - `controllers/`: Pra lógica e interação com a página.
+index.html: o principal, onde os clientes visualizam o catálogo dos produtos de dona Maria.
 
-## Decisões que tomei
+admin.html: área administrativa, onde o CRUD permite cadastrar, editar e remover os produtos do sistema.
 
-- Usei um MVC simplificado: Model pra dados, View pro HTML, Controller pra lógica. É bem básico, mas funciona.
-- Pra salvar os dados, usei LocalStorage e JSON, já que não tem banco de dados de verdade.
-- Deixei responsivo com CSS Grid e Media Queries, pra ficar bom no PC e no celular.
-- Separei as responsabilidades: Model cuida dos dados, Controllers cuidam da interação.
+style.css: responsável pelo estilo do projeto, e inclui responsividade para dispositivos móveis.
 
-## Como funciona o app
+global.css: base que pode ser usado em todo o projeto, fundamento pro resto dos CSS
 
-### Catálogo (index.html)
-- Mostra os doces em um grid legal, cada um com nome, categoria, descrição, preço e foto.
-- Tem um botão "Pedir pelo WhatsApp" pra mandar mensagem direto.
+admin.css: CSS específico pro admin.html, customiza o admin pra ser prática de usar
 
-### Área Admin (admin.html)
-- Formulário pra cadastrar novos doces.
-- Lista todos os doces com opções pra editar ou deletar.
-- Tudo fica salvo no LocalStorage do navegador.
+app.js: controla a página inicial, carrega os produtos nos cards, contorla carrinho de compras e lida com eventos
 
-## Padrão que usei
+storage.js: cuida de salvar, carregar dados usando localstorage do navegador e arquivos JSON
 
-MVC Simplificado:
-- **Model**: Gerencia os dados (DoceModel.js).
-- **View**: As páginas HTML.
-- **Controller**: A lógica de interação (CatalogoController.js e AdminController.js).
+cart.js: específico pro carrinho, mas é integrado no storage.js, ele cuida de adicionar e remover produtos do carrinho e calcular total
 
-## Como rodar
+admin.js: controla a página do admin, onde dona Maria gerencia seus produtos
 
-1. Abre o `index.html` no navegador pra ver o catálogo.
-2. Abre o `admin.html` pra gerenciar os doces.
-3. Os dados ficam salvos localmente no navegador, tipo no cache.
-
-## Tecnologias que usei
-
-- HTML5
-- CSS3 (com Media Queries pra responsividade)
-- JavaScript (ES6+)
-- LocalStorage pra persistência
-- JSON pra manipular os dados
-
-Foi um projeto legal pra aprender sobre frontend e organização de código! Se tiver dúvidas, pergunta aí. 🚀
