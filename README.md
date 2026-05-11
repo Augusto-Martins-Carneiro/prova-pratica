@@ -125,3 +125,5 @@ Fotos dos doces usadas pelo catálogo.
 Uso da inteligência artificial:
 
 Como proposto de forma consultiva para o projeto sobre IA, para tirar dúvidas e etc. Eu usei bastante a IA para corrigir o alinhamento e, quando eu tirava dúvidas, ela me recomendava exemplos de código para melhorar meu sistema, além que a IA do visual code ajudou muito a exergar os erros, corrigir bugs e deixá-lo funciona. Isso é um dos motivos do porque meu código possuem na maioria das vezes bastante linhas, pois a IA foi me ajudando ao eu esclarecer minhas dúvidas.
+
+Também pedi para ela comentar as partes mais dificeis do projeto, pois eu não sou muito bom com comentários.
